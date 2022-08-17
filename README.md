@@ -1,3 +1,7 @@
+# Demo
+
+<img src='demo/search-app-demo.gif'>
+
 # Steps to setup search-app
 
 - First clone, setup and run the server from repo <a href="https://github.com/mayursdev/search-app-backend" target="_blank">
