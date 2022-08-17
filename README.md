@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Steps to setup search-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- First clone, setup and run the server from repo <a href="https://github.com/mayursdev/search-app-backend" target="_blank">
+  search-app-backend</a> to make frontend functional
+- Rename .env_sample in project to .env and set the base url of server (default is http://localhost:5000) at key REACT_APP_API_BASE_URL
+  Eg: `REACT_APP_API_BASE_URL = http://localhost:5000`
+- 🔥 All set
 
 ## Available Scripts
 

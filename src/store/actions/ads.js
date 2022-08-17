@@ -25,9 +25,8 @@ export const fetchAdsAsync = (searchTerm) => {
     dispatch(fetchAdsAsyncPending());
     try {
       const { data } = await axios.get(
-        "https://jsonplaceholder.typicode.com/users"
+        `${process.env.REACT_APP_API_BASE_URL}/api/adverts?search=${searchTerm}`
       );
-      console.log(data);
       dispatch(fetchAdsAsyncFulfilled(data));
     } catch (error) {
       dispatch(fetchAdsAsyncRejected(error.message));

@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { debounce } from "../utils";
+import { useDispatch } from "react-redux";
 import SearchSvg from "./svg/SearchSvg";
+import { fetchAdsAsync } from "../store/actions/ads";
 
-// to prevent excess api calls
-const debouncedSearch = debounce(500, (searchTerm) => {
-  // make fetch ads api call here
-  console.log(searchTerm);
+// debouncing to prevent excess api calls while searching
+const debouncedSearch = debounce(500, (dispatch, searchTerm) => {
+  dispatch(fetchAdsAsync(searchTerm));
 });
 
 const Navbar = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    if (searchTerm !== "") debouncedSearch(searchTerm);
-  }, [searchTerm]);
+    if (searchTerm !== "") debouncedSearch(dispatch, searchTerm);
+  }, [searchTerm, dispatch]);
 
   const handleSearchInputChange = (e) => {
     setSearchTerm(e.target.value);
