@@ -1,4 +1,4 @@
-# 🔥 Demo
+# 🖼️ Demo
 
 <img src='demo/search-app-demo.gif'>
 
