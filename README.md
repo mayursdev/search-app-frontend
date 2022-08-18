@@ -1,4 +1,4 @@
-# 🖼️ Demo
+# 📷 Demo
 
 <img src='demo/search-app-demo.gif'>
 
@@ -8,7 +8,8 @@
   search-app-backend</a> to make frontend functional
 - Rename .env_sample in project to .env and set the base url of server (default is http://localhost:5000) at key REACT_APP_API_BASE_URL
   Eg: `REACT_APP_API_BASE_URL = http://localhost:5000`
-- 🔥 All set
+- 📦 Install dependencies: `npm install`
+- 🏃 Run the app `npm start`
 
 ## Available Scripts
 
